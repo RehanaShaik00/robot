@@ -31,5 +31,5 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    filePath: 'robot AlarmTest\Features\HighTempAlarmFeature.robot'
+    filePath: 'robot HighTempAlarmFeature.robot'
 - task: PublishTestResults@2
