@@ -31,5 +31,5 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    filePath: 'robot --pythonpath . -x outputxunit.xml AlarmTest\Features\*.robot'
+    filePath: 'robot AlarmTest\Features\HighTempAlarmFeature.robot'
 - task: PublishTestResults@2
