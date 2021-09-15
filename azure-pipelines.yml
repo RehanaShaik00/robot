@@ -25,10 +25,6 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- task: CmdLine@2
-  inputs:
-    script: msiexec.exe/i/ ChromeSetup.exe/ passive
-
 - script: |
     pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
