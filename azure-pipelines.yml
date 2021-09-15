@@ -26,7 +26,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
-    pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
+    pip install webdriver-manager robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
 
 - task: CmdLine@2
