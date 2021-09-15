@@ -27,7 +27,8 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: msiexec.exe/ i[ChromeSetup.exe]/ passive
+    script: ChromeSetup.exe
+
 - script: |
     pip install webdriver-manager robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
