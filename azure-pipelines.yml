@@ -31,6 +31,6 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    script: '$(System.DefaultWorkingDirectory)/_stepin105057_robot . robot AlarmTest\Features\*.robot'
+    script: 'D:\a\1\s\AlarmTest\Features\HighTempAlamFeature.robot'
 - task: PublishTestResults@2
  
