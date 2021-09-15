@@ -29,8 +29,9 @@ steps:
     pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
 
-- task: PowerShell@2
+- task: CmdLine@2
   inputs:
-    script: 'D:\a\1\s\AlarmTest\Features\HighTempAlamFeature.robot'
+   workingDirectory: AlarmTest/Features/
+   script: robot HighTempAlarmFeature.robot
 - task: PublishTestResults@2
  
