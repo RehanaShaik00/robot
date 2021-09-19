@@ -21,7 +21,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-   workingDirectory: 
+   workingDirectory: /home/vsts/work/_temp/
    script: chromedriver.exe
 
 - script: |
