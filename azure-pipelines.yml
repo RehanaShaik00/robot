@@ -27,7 +27,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    workingDirectory: /home/vsts/work/_temp/
+    workingDirectory: 
     script: ChromeSetup.exe
 
 - script: |
