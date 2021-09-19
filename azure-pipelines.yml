@@ -10,12 +10,6 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
     Python37:
       python.version: '3.7'
 
@@ -25,10 +19,6 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- task: CmdLine@2
-  inputs:
-    workingDirectory: 
-    script: ChromeSetup.exe
 
 - script: |
     pip install webdriver-manager robotframework robotframework-seleniumlibrary && npm install chromedriver
