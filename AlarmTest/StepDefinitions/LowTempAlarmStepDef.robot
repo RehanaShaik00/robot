@@ -14,7 +14,7 @@ Set Low temp alarm limit -5.0 deg-SVB5
 
 Set Low Temp in SVB5
     [Arguments]     ${tempvalueinsvb5}
-    double click element    xpath://td[contains(text(),'-5.0 °C')]
+    double click element    xpath://*[@id="idTable-2"]/div/div/table/tbody/tr[6]/td[2]
     clear element text  xpath://body/ngb-modal-window[1]/div[1]/div[1]/app-edit-float[1]/div[1]/form[1]/div[2]/input[1]
     input text      xpath://body/ngb-modal-window[1]/div[1]/div[1]/app-edit-float[1]/div[1]/form[1]/div[2]/input[1]     ${tempvalueinsvb5}
     click element   xpath://body/ngb-modal-window[1]/div[1]/div[1]/app-edit-float[1]/div[1]/form[1]/div[3]/button[2]
