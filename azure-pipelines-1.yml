@@ -25,6 +25,11 @@ steps:
 
 - task: CmdLine@2
   inputs:
+   workingDirectory: /home/vsts/work/_temp/
+   script: chromedriver.exe
+  
+- task: CmdLine@2
+  inputs:
    workingDirectory: AlarmTest/Features/
    script: robot HighTempAlarmFeature.robot
 - task: PublishTestResults@2
