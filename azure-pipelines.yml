@@ -19,6 +19,10 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
+- task: CmdLine@2
+  inputs:
+    workingDirectory: /home/vsts/work/_temp/
+    script: chromedriver.exe
 
 - script: |
     pip install webdriver-manager robotframework robotframework-seleniumlibrary && npm install chromedriver
