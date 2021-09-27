@@ -2,9 +2,13 @@
 Library  SeleniumLibrary
 
 *** Keywords ***
+webdriver
+    Create Webdriver    Chrome    executable_path=chromedriver.exe
 LogintoSVB5 and Select device AK-CC550-018x 20
     [Arguments]     ${SVB5username}      ${SVB5password}
-    open browser    ${danfossURL}   ${browser}
+    webdriver
+    go to       ${danfossURL}
+    #open browser    ${danfossURL}   ${browser}
     maximize browser window
     set selenium implicit wait      50seconds
     set selenium speed      1seconds
@@ -29,7 +33,9 @@ setting delay in svb5
 
 LogintoMCX and select analog output
     [Arguments]     ${MCXusername}      ${MCXpassword}
-    open browser     ${MCXURL}     ${browser}
+    webdriver
+    go to       ${MCXURL}
+    #open browser     ${MCXURL}     ${browser}
     maximize browser window
     set selenium implicit wait      200seconds
     set selenium speed      1seconds
