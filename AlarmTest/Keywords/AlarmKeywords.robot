@@ -11,7 +11,7 @@ ${CUR}       DanfossAutomation
 *** Keywords ***
 webdriver
     Set Environment Variable    webdriver.chrome.driver   ${CURDIR}${/}chromedriver.exe
-    Create Webdriver    Chrome    executable_path=chromedriver.exe
+    Create Webdriver    Chrome    webdriver.chrome.driver
 LogintoSVB5 and Select device AK-CC550-018x 20
     [Arguments]     ${SVB5username}      ${SVB5password}
     webdriver
