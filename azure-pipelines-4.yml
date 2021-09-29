@@ -29,7 +29,11 @@ steps:
     pip install webdriver-manager robotframework robotframework-seleniumlibrary && npm install chromedriver
   displayName: 'Install dependencies'
 
-- powershell: robot --pythonpath . -x outputxunit.xml robot HighTempAlarmFeature.robot
+
+- task: CmdLine@2
+  inputs:
+   workingDirectory: AlarmTest/Features/
+   Script: robot --pythonpath . -x outputxunit.xml robot HighTempAlarmFeature.robot
   displayName: 'Run Robot Scripts'
 
 
