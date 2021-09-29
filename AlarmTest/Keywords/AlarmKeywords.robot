@@ -1,5 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library     OperatingSystem
 
 *** Variables ***
 ${TEMPDIR}      C:/Users/61449/AppData/Local/Temp
