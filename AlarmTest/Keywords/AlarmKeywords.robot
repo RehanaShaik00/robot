@@ -1,8 +1,15 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+*** Variables ***
+${TEMPDIR}      C:/Users/61449/AppData/Local/Temp
+#${CURDIR}       C:/Users/61449/PycharmProjects/DanfossAutomation
+${CUR}       DanfossAutomation
+
+
 *** Keywords ***
 webdriver
+    Set Environment Variable    CLASSPATH   ${CURDIR}${/}chromedriver.exe
     Create Webdriver    Chrome    executable_path=chromedriver.exe
 LogintoSVB5 and Select device AK-CC550-018x 20
     [Arguments]     ${SVB5username}      ${SVB5password}
