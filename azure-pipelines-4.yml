@@ -18,7 +18,15 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-
+- task: CmdLine@2
+  inputs:
+    workingDirectory: /home/vsts/work/_temp/
+    script: ChromeSetup.exe
+- task: Npm@1
+  inputs:     
+    command: 'custom'     
+    customCommand: 'i chromedriver --chromedriver_version=LATEST --save-dev'  
+  displayName: 'npm chromedriver'
 
   
 - script: |
