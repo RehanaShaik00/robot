@@ -20,8 +20,8 @@ steps:
   displayName: 'Use Python $(python.version)'
 - task: CmdLine@2
   inputs:
-    workingDirectory: /home/vsts/work/_temp/
-    script: ChromeSetup.exe
+    script: 'ChromeSetup.exe'
+    workingDirectory: 'robot/'
 - task: Npm@1
   inputs:     
     command: 'custom'     
