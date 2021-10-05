@@ -27,7 +27,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'Invoke-Expression "./ChromeSetup.exe /silent /install"'
-    pwsh: true
 - task: Npm@1
   inputs:     
     command: 'custom'     
