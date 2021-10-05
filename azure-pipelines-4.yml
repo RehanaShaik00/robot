@@ -20,10 +20,13 @@ steps:
   displayName: 'Use Python $(python.version)'
 - bash: ls -al
 - bash: pwd
-- task: CmdLine@2
+# - task: CmdLine@2
+#   inputs:
+#     script: 'ChromeSetup.exe'
+- task: PowerShell@2
   inputs:
-    script: 'ChromeSetup.exe'
-
+    targetType: 'inline'
+    script: 'Start-Process -FilePath ChromeSetup.exe -Args "/silent /install" -Verb RunAs -Wait'
 - task: Npm@1
   inputs:     
     command: 'custom'     
