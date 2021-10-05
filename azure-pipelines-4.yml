@@ -22,7 +22,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ChromeSetup.exe'
-    workingDirectory: 'robot/'
+    workingDirectory: '/'
 - task: Npm@1
   inputs:     
     command: 'custom'     
