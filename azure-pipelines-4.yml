@@ -18,6 +18,7 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+- bash: ls -al
 - task: CmdLine@2
   inputs:
     script: 'ChromeSetup.exe'
