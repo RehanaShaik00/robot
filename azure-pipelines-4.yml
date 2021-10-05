@@ -26,7 +26,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'Start-Process -FilePath ChromeSetup.exe -Args "/silent /install" -Verb RunAs -Wait'
+    script: 'Invoke-Expression "./ChromeSetup.exe /silent /install"'
     pwsh: true
 - task: Npm@1
   inputs:     
