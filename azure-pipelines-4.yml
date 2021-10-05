@@ -23,7 +23,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ChromeSetup.exe'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+
 - task: Npm@1
   inputs:     
     command: 'custom'     
