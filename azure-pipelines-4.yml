@@ -27,6 +27,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'Start-Process -FilePath ChromeSetup.exe -Args "/silent /install" -Verb RunAs -Wait'
+    pwsh: true
 - task: Npm@1
   inputs:     
     command: 'custom'     
