@@ -25,8 +25,8 @@ steps:
 #     script: 'ChromeSetup.exe'
 - task: PowerShell@2
   inputs:
-    filePath: 'robot/test.ps1'
-    workingDirectory: 'robot'
+    filePath: 'test.ps1'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: Npm@1
   inputs:     
     command: 'custom'     
